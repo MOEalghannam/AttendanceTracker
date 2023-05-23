@@ -1,0 +1,59 @@
+﻿<resources>
+    <string name="app_name">AttendanceTracker</string>
+    <string name="action_settings">Settings</string>
+    <string name="day_prompt">اليوم</string>
+	<string-array name="car_array">
+		<item>الأحد</item>
+		<item>الإثنين</item>
+		<item>الثلاثاء</item>
+		<item>الأربعاء</item>
+		<item>الخميس</item>
+		<item>الجمعة</item>
+		<item>السبت</item>
+	</string-array>
+
+
+	<string name="ActivityMain">الصفحة الرئيسية</string>
+	<string name="AttendanceBTN">سجل الحضور</string>
+	<string name="NewClassBTN">إضافة مادة</string>
+	<string name="EditClass_AttendanceBTN">التعديل على معلومات المادة / الحضور</string>
+
+
+	<string name="ActivityUpdateAtten">التعديل على الحضور</string>
+	<string name="Absent_Times">عدد الغياب</string>
+	<string name="Submit_EditActivity">تحديث</string>
+
+	<string name="Activity_UpdateClass">تعديل المادة</string>
+	<string name="Class_Name">اسم المادة</string>
+	<string name="Class_Hours">ساعات المادة</string>
+	<string name="Lecture_Hours">ساعات المحاضرة</string>
+	<string name="Class_Time">وقت المحاضرة</string>
+	<string name="Start_TimeBTN">وقت البداية</string>
+	<string name="End_TimeBTN">وقت النهاية</string>
+	<string name="Class_Location">موقع المحاضرة</string>
+	<string name="Latitude">خط العرض</string>
+	<string name="Longitude">خط الطول</string>
+	<string name="Submit_UpdateClassActivity">تحديث</string>
+
+	<string name="Activity_InsertClass">مادة جديدة</string>
+	<string name="Submit_InsertClassActivity">إضافة</string>
+
+	<string name="Activity_SearchClass">البحث عن مادة</string>
+	<string name="Enter_Class_Name">ادخل اسم المادة</string>
+	<string name="UpdateInfoBTN">تحديث المعلومات</string>
+	<string name="UpdateAttendanceBTN">التعديل على الحضور</string>
+
+	<string name="Activity_AttendanceRecord">سجل الحضور</string>
+	<string name="Activity_AttendanceBanner">\t\t\t  ٪\t\t\t\t\t\tالغياب\t\t\t\t\t\t\t\t\t\tاسم المادة</string>
+
+	<string name="Attendance_Marked">حالة الحضور</string>
+	<string name="PresentNoti">انت حاضر في محاضرة</string>
+	<string name="AbsentNotiP1">انت متغيب عن محاضرة </string>
+	<string name="AbsentNotiP2"> نسبة غيابك اصبحت: </string>
+	<string name="WarningP1">تحذير لمادة: </string>
+	<string name="WarningP2"> نسبة غيابك اصبحت: </string>
+	<string name="TeacherP1">الرجاء التواصل مع معلم مادة: </string>
+	<string name="TeacherP2"> نسبة غيابك اصبحت: </string>
+	
+	
+</resources>

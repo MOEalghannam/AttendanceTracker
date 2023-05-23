@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@mipmap/backgroundpurple">
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/linearLayout1">
+		<LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+			android:layout_marginStart="100dp"
+            android:id="@+id/linearLayout6">
+            <ImageView
+                android:src="@drawable/logo100pxrounded"
+                android:layout_width="30dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/imageView1" />
+            <TextView
+                android:text="@string/Activity_AttendanceRecord"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:textSize="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:id="@+id/textView1"
+                android:textColor="#F2F2F2"
+                android:textStyle="normal" />
+        </LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="20dp"
+			android:id="@+id/linearLayout2">
+			<LinearLayout
+				android:orientation="horizontal"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/linearLayout3" >
+				<TextView
+				android:text="@string/Activity_AttendanceBanner"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/textView1"
+				android:textColor="#FFFFFF"
+				android:paddingLeft="10dp"	
+				android:textStyle="bold"
+				android:textSize="20dp" 
+				/>
+			
+			</LinearLayout>
+
+			<ListView
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/display"
+				android:layout_margin="5dp"/>
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

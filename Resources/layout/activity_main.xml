@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/backgroundpurple">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1" >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="110dp"
+            android:layout_height="50dp"
+            android:id="@+id/linearLayout2">
+            <ImageView
+                android:src="@drawable/logo100pxrounded"
+                android:layout_width="30dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/imageView1" />
+            <TextView
+                android:text="@string/ActivityMain"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:textSize="24dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="5dp"
+                android:id="@+id/textView1"
+                android:textColor="#F2F2F2"
+                android:textStyle="normal" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="40dp"
+            android:id="@+id/linearLayout3" >
+			<Button
+				android:text="@string/AttendanceBTN"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/enter_atten"
+				android:layout_margin="10dp"
+				android:background="@drawable/mybutton"
+				android:textColor="#FFFFFF"
+				android:textStyle="bold" />
+            <Button
+                android:text="@string/NewClassBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/enter_classes" 
+                android:layout_margin="10dp"
+                android:background="@drawable/mybutton"
+				android:textColor="#FFFFFF"
+				android:textStyle="bold" />
+        </LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/linearLayout4" >
+			<Button
+                android:text="@string/EditClass_AttendanceBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_button" 
+                android:layout_margin="10dp"
+                android:background="@drawable/mybutton"
+				android:textColor="#FFFFFF"
+				android:textStyle="bold"
+                android:layout_marginTop="40dp"/>
+		</LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

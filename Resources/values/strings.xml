@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">AttendanceTracker</string>
+    <string name="action_settings">Settings</string>
+	<string name="day_prompt">Choose Day</string>
+	<string-array name="car_array">
+		<item>Sunday</item>
+		<item>Monday</item>
+		<item>Tuesday</item>
+		<item>Wednesday</item>
+		<item>Thursday</item>
+		<item>Friday</item>
+		<item>Saturday</item>
+	</string-array>
+
+
+	<string name="ActivityMain">Main Page</string>
+	<string name="AttendanceBTN">Attendance Record</string>
+	<string name="NewClassBTN">New Class</string>
+	<string name="EditClass_AttendanceBTN">Edit Class or Attendance</string>
+
+
+	<string name="ActivityUpdateAtten">Update Attendance</string>
+	<string name="Absent_Times">Absent Times</string>
+	<string name="Submit_EditActivity">Update</string>
+
+	<string name="Activity_UpdateClass">Update Class</string>
+	<string name="Class_Name">Class Name</string>
+	<string name="Class_Hours">Class Hours</string>
+	<string name="Lecture_Hours">Lecture Hours</string>
+	<string name="Class_Time">Class Time</string>
+	<string name="Start_TimeBTN">Start Time</string>
+	<string name="End_TimeBTN">End Time</string>
+	<string name="Class_Location">Class Location</string>
+	<string name="Latitude">Latitude</string>
+	<string name="Longitude">Longitude</string>
+	<string name="Submit_UpdateClassActivity">Update</string>
+
+	<string name="Activity_InsertClass">New Class</string>
+	<string name="Submit_InsertClassActivity">Submit</string>
+
+	<string name="Activity_SearchClass">Search Class</string>
+	<string name="Enter_Class_Name">Type Class Name</string>
+	<string name="UpdateInfoBTN">Update Info</string>
+	<string name="UpdateAttendanceBTN">Update Attendance</string>
+
+	<string name="Activity_AttendanceRecord">Attendance Record</string>
+	<string name="Activity_AttendanceBanner">  Class Name\t\t\t\t\t\t\t\t\t\tAbsent\t\t\t\t\t\t%</string>
+
+
+	<string name="Attendance_Marked">Attendance Marked</string>
+	<string name="PresentNoti">You are Present in </string>
+	<string name="AbsentNotiP1">You were Absent in </string>
+	<string name="AbsentNotiP2"> you reached: </string>
+	<string name="WarningP1">WARNING in </string>
+	<string name="WarningP2"> you reached: </string>
+	<string name="TeacherP1">Please contact your teacher for </string>
+	<string name="TeacherP2"> you reached: </string>
+
+</resources>
