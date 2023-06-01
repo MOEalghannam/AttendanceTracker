@@ -1,4 +1,7 @@
-﻿using Android.App;
+﻿/* This is a class called `Translations`  The class contains two static methods: `ARtoENG` and `ENGtoAR`. These methods
+take a string input and return a translated version of the input from Arabic to English or from
+English to Arabic, respectively. */
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;

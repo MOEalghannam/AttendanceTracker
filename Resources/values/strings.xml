@@ -42,6 +42,7 @@
 	<string name="Enter_Class_Name">Type Class Name</string>
 	<string name="UpdateInfoBTN">Update Info</string>
 	<string name="UpdateAttendanceBTN">Update Attendance</string>
+	<string name="DeleteClassBTN">Delete Class</string>
 
 	<string name="Activity_AttendanceRecord">Attendance Record</string>
 	<string name="Activity_AttendanceBanner">  Class Name\t\t\t\t\t\t\t\t\t\tAbsent\t\t\t\t\t\t%</string>
@@ -55,5 +56,18 @@
 	<string name="WarningP2"> you reached: </string>
 	<string name="TeacherP1">Please contact your teacher for </string>
 	<string name="TeacherP2"> you reached: </string>
+
+
+
+	<string name="Confirmation">Confirmation</string>
+	<string name="ConfirmationMessage">Are you sure you want to delete this class?</string>
+	<string name="ConformationDelete">Delete</string>
+	<string name="ConfirmationCancel">Cancel</string>
+
+	<string name="FieldsWarning">Please fill in all fields.</string>
+	<string name="MarkerWarning">Please choose a location on the map.</string>
+	<string name="NameUsed">The class name is already used.</string>
+	
+	
 
 </resources>

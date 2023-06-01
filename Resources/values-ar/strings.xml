@@ -13,7 +13,7 @@
 	</string-array>
 
 
-	<string name="ActivityMain">الصفحة الرئيسية</string>
+	<string name="ActivityMain">الرئيسية</string>
 	<string name="AttendanceBTN">سجل الحضور</string>
 	<string name="NewClassBTN">إضافة مادة</string>
 	<string name="EditClass_AttendanceBTN">التعديل على معلومات المادة / الحضور</string>
@@ -42,6 +42,7 @@
 	<string name="Enter_Class_Name">ادخل اسم المادة</string>
 	<string name="UpdateInfoBTN">تحديث المعلومات</string>
 	<string name="UpdateAttendanceBTN">التعديل على الحضور</string>
+	<string name="DeleteClassBTN">حذف المادة</string>
 
 	<string name="Activity_AttendanceRecord">سجل الحضور</string>
 	<string name="Activity_AttendanceBanner">\t\t\t  ٪\t\t\t\t\t\tالغياب\t\t\t\t\t\t\t\t\t\tاسم المادة</string>
@@ -54,6 +55,16 @@
 	<string name="WarningP2"> نسبة غيابك اصبحت: </string>
 	<string name="TeacherP1">الرجاء التواصل مع معلم مادة: </string>
 	<string name="TeacherP2"> نسبة غيابك اصبحت: </string>
+
+
+	<string name="Confirmation">التاكيد</string>
+	<string name="ConfirmationMessage">هل انت متاكد من حذف المادة؟</string>
+	<string name="ConformationDelete">حذف</string>
+	<string name="ConfirmationCancel">التراجع</string>
+
+	<string name="FieldsWarning">الرجاء تعبئة جميع البيانات</string>
+	<string name="MarkerWarning">الرجاء اختيار موقع</string>
+	<string name="NameUsed">اسم المادة مستخدم مسبقًا</string>
 	
 	
 </resources>

@@ -1,4 +1,11 @@
-﻿using Android.App;
+﻿/* The above code is implementing a background service in an Android app that takes attendance for
+classes based on the user's location. The service runs continuously and checks for eligible classes
+(classes that occur on the current day of the week and whose start time is 20 minutes or more ago).
+If attendance has not been taken for the class that day, the service gets the user's current
+location and determines if the user is within the specified range of the class location. If the user
+is within range, the attendance count for the class is updated as "present". If the user is not
+within range, the attendance */
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
@@ -14,14 +21,17 @@ using Xamarin.Essentials;
 namespace AttendanceTracker
 {
     [Service]
-
+// Service that manages class attendance tracking
     public class ClassAttendanceService : Service
     {
 
         public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
         {
+            
+            // Getting the system service for notifications and casting it to a `NotificationManager` object.
+            // This allows the app to create and manage notifications.
             var notificationManager = GetSystemService(NotificationService) as NotificationManager;
-
+            // Create a notification channel for the service
             NotificationChannel channel = new NotificationChannel("ClassAttendanceChannel", "Class Attendance Channel", NotificationImportance.Default)
             {
                 Description = "Channel for class attendance notifications"
@@ -30,7 +40,7 @@ namespace AttendanceTracker
             // Register the channel with the system
             notificationManager.CreateNotificationChannel(channel);
 
-            // Create the notification
+            // Create the foreground notification
             Notification notification = new Notification.Builder(this, "ClassAttendanceChannel")
                 .SetContentTitle("Class Attendance Service")
                 .SetContentText("Running...")
@@ -39,7 +49,7 @@ namespace AttendanceTracker
 
             try
             {
-                // Start the service
+                // Start the service in the foreground with the notification
                 StartForeground(1, notification);
                 Start();
                 return StartCommandResult.Sticky;
@@ -55,6 +65,7 @@ namespace AttendanceTracker
 
         public ClassAttendanceService()
         {
+            // Create an instance of the ClassInfoOperations class for managing class information in the database
             classDb = new ClassInfoOperations();
         }
 
@@ -62,12 +73,13 @@ namespace AttendanceTracker
         {
             return null;
         }
-
+        // Start the class attendance tracking
         public async Task Start()
         {
 
             while (true)
             {
+                 // Get the current day of the week and time
                 var currentDayOfWeek = DateTime.Now.DayOfWeek.ToString();
                 var currentHour = DateTime.Now.TimeOfDay;
                 var thirtyMinutes = TimeSpan.FromMinutes(20);
@@ -114,7 +126,7 @@ namespace AttendanceTracker
                         var maxDistance = 0.02; // Maximum distance user can be from class location, in kilometers
                         var isWithinRange = distance <= maxDistance;
 
-                        // Update attendance counts
+                        // Update attendance counts and send notifications
                         if (isWithinRange)
                         {
                             c.Present++;
@@ -147,7 +159,7 @@ namespace AttendanceTracker
                     }
                 }
 
-                // Wait 30 minutes before checking again
+                // Wait 2 minutes before checking again
                 await Task.Delay(TimeSpan.FromMinutes(2));
             }
         }

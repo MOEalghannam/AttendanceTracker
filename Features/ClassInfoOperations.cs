@@ -1,4 +1,8 @@
-﻿using Android.App;
+﻿/* This is a class that defines operations for managing class information in a SQLite database. It
+includes methods for inserting, updating, and deleting classes, as well as retrieving all classes or
+a specific class by name. The `ClassInfo` class is also defined within this class, which represents
+the structure of the data stored in the database.  */
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
@@ -15,10 +19,11 @@ namespace AttendanceTracker
 {
     internal class ClassInfoOperations
     {
+        // Path to the database file
         private readonly string dbPath = Path.Combine(System.Environment.GetFolderPath(
             System.Environment.SpecialFolder.Personal), "classinfo13.db3");
 
-
+        // Constructor
         public ClassInfoOperations()
         {
             //Creating database, if it doesn't already exist 
@@ -26,28 +31,29 @@ namespace AttendanceTracker
             {
                 var db = new SQLiteConnection(dbPath);
                 db.CreateTable<ClassInfo>();
-                //db.CreateTable<Students>();
+                
             }
         }
-
+        // Insert a class into the database
         public void InsertClass(ClassInfo Class)
         {
             var db = new SQLiteConnection(dbPath);
             db.Insert(Class);
         }
-        // User Upbdate
+        // Update a class in the database
         public void UpdateClass(ClassInfo Class)
         {
             var db = new SQLiteConnection(dbPath);
             db.Update(Class);
         }
 
-        // User Delete
+        // Delete a class from the database
         public void DeleteClass(ClassInfo Class)
         {
             var db = new SQLiteConnection(dbPath);
             db.Delete(Class);
         }
+        // Retrieve all classes from the database
         public List<ClassInfo> GetClasses()
         {
             using (var db = new SQLiteConnection(dbPath))
@@ -56,6 +62,7 @@ namespace AttendanceTracker
                 return db.Table<ClassInfo>().ToList();
             }
         }
+        // Retrieve data from the database as a string List
         public List<string> GetData()
         {
             var db = new SQLiteConnection(dbPath);
@@ -68,15 +75,14 @@ namespace AttendanceTracker
             }
             return data;
         }
+        // Retrieve a class by its name from the database
         public ClassInfo GetClassByName(string classname)
         {
             var db = new SQLiteConnection(dbPath);
 
             return db.Table<ClassInfo>().Where(i => i.ClassName == classname).FirstOrDefault();
         }
-
-
-
+        // ClassInfo table definition
         [Table("ClassInfo")]
         public class ClassInfo
         {

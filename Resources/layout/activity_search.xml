@@ -44,7 +44,7 @@
 			android:minWidth="25px"
 			android:minHeight="25px"
 			android:layout_width="match_parent"
-			android:layout_height="300dp"
+			android:layout_height="350dp"
 			android:id="@+id/linearLayout3"
 			android:layout_marginTop="20dp">
 			<EditText
@@ -71,6 +71,15 @@
 			android:id="@+id/updateatten_button"
 			android:layout_marginHorizontal="20dp"
 			android:background="@drawable/mybutton"
+			android:textColor="#FFFFFF"/>
+		<Button
+			android:text="@string/DeleteClassBTN"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/deleteclass_button"
+			android:layout_marginTop="20dp"
+			android:layout_marginHorizontal="20dp"
+			android:background="@drawable/red_button"
 			android:textColor="#FFFFFF"/>
 		</LinearLayout>
 		

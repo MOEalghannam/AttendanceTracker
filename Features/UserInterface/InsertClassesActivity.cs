@@ -14,6 +14,8 @@ using static Android.App.TimePickerDialog;
 using Android;
 using Android.Content.Res;
 using Java.Util;
+using SQLite;
+using static AttendanceTracker.ClassInfoOperations;
 
 namespace AttendanceTracker
 {
@@ -92,6 +94,29 @@ namespace AttendanceTracker
 
             submit.Click += delegate
             {
+                var sq = new ClassInfoOperations();
+                if (string.IsNullOrEmpty(classname.Text) || string.IsNullOrEmpty(classhours.Text) || string.IsNullOrEmpty(subjecthours.Text))
+                {
+                    Toast.MakeText(this, GetString(Resource.String.FieldsWarning), ToastLength.Short).Show();
+                    return;
+                }
+
+                if (selectedLocation == null)
+                {
+                    Toast.MakeText(this, GetString(Resource.String.MarkerWarning), ToastLength.Short).Show();
+                    return;
+                }
+
+                var compare = classname.Text;
+
+                // Check if the class name is already used
+                if (sq.GetClassByName(compare) != null)
+                {
+                    Toast.MakeText(this, GetString(Resource.String.NameUsed), ToastLength.Short).Show();
+                    return;
+                }
+
+
                 TimeSpan selectedTimeStart = new TimeSpan(starthour, startminutes, 0);
                 TimeSpan selectedTimeEnd = new TimeSpan(endhour, endminutes, 0);
                 if (currentLocale.Language == "ar")
@@ -110,16 +135,16 @@ namespace AttendanceTracker
                     StartTime = selectedTimeStart,
                     EndTime = selectedTimeEnd
                 };
-                var sq = new ClassInfoOperations();
+                sq = new ClassInfoOperations();
                 sq.InsertClass(classinfo);
 
                 Intent i = new Intent(this, typeof(MainActivity));
                 StartActivity(i);
+                Finish();
 
             };
 
         }
-
         public void OnMapReady(GoogleMap map)
         {
             googleMap = map;
@@ -141,6 +166,9 @@ namespace AttendanceTracker
                 googleMap.MoveCamera(cameraUpdate);
             }
         }
+        
+
+     
 
         private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
